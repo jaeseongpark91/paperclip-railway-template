@@ -54,4 +54,5 @@ EXPOSE 3100
 ENTRYPOINT ["/wrapper/entrypoint.sh"]
 CMD ["node", "/wrapper/src/server.js"]
 
+RUN mkdir -p /paperclip && chown -R node:node /paperclip
 USER node
